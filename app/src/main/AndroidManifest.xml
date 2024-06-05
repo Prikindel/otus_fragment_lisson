@@ -13,24 +13,27 @@
         android:theme="@style/Theme.Otusfragmentlesson"
         tools:targetApi="31">
         <activity
-            android:name=".finish.MainActivityFinish"
-            android:exported="false" />
-        <activity
-            android:name=".start.MainActivity"
-            android:exported="false">
-        </activity>
-
-        <activity android:name=".lesson2.master_detail.finish.MasterDetailFinishActivity"
-            android:exported="false">
-        </activity>
-
-        <activity android:name=".lesson2.master_detail.start.MasterDetailActivity"
-            android:exported="true">
+            android:name=".NavActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nav" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".finish.MainActivityFinish"
+            android:exported="false" />
+        <activity
+            android:name=".start.MainActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".lesson2.master_detail.finish.MasterDetailFinishActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".lesson2.master_detail.start.MasterDetailActivity"
+            android:exported="true">
         </activity>
     </application>
 
