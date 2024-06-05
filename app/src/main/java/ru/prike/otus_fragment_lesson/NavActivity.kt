@@ -18,5 +18,11 @@ class NavActivity : AppCompatActivity() {
 
         binding = ActivityNavBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val navView: BottomNavigationView = binding.navView
+
+        val navController = findNavController(R.id.nav_host_fragment_container)
+//        navController.popBackStack(R.id.nav_host_fragment_container, true)
+        navView.setupWithNavController(navController)
     }
 }
