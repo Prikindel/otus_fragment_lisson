@@ -17,6 +17,14 @@
             android:exported="false" />
         <activity
             android:name=".start.MainActivity"
+            android:exported="false">
+        </activity>
+
+        <activity android:name=".lesson2.master_detail.finish.MasterDetailFinishActivity"
+            android:exported="false">
+        </activity>
+
+        <activity android:name=".lesson2.master_detail.start.MasterDetailActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
