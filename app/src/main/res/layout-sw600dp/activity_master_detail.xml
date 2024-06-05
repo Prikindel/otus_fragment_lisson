@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:name="ru.prike.otus_fragment_lesson.lesson2.master_detail.finish.MasterDetailListFinishFragment"
+        android:name="ru.prike.otus_fragment_lesson.lesson2.master_detail.start.MasterDetailListFragment"
         tools:layout="@layout/fragment_master_detail_items_list" />
 
     <View
