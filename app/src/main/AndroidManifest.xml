@@ -24,13 +24,13 @@
         </activity>
         <activity
             android:name=".finish.MainActivityFinish"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".start.MainActivity"
-            android:exported="false"></activity>
+            android:exported="true"></activity>
         <activity
             android:name=".lesson2.master_detail.finish.MasterDetailFinishActivity"
-            android:exported="false"></activity>
+            android:exported="true"></activity>
         <activity
             android:name=".lesson2.master_detail.start.MasterDetailActivity"
             android:exported="true">
