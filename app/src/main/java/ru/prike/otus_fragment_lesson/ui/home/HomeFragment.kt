@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import ru.prike.otus_fragment_lesson.R
 import ru.prike.otus_fragment_lesson.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,6 +26,16 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.toDashboard.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_dashboardFragment)
+        }
+
+        binding.toNotification.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToNotificationsFragment()
+            action.username = "Board"
+            findNavController().navigate(action)
+        }
 
         return root
     }
