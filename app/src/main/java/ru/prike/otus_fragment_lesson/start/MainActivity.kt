@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
             topFragment = TopFragment()
             bottomFragment = BottomFragment()
 
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.top_container, topFragment, "top")
+                .replace(R.id.bottom_container, topFragment)
+                .commit()
         } else {
-            // topFragment = supportFragmentManager.findFragmentByTag("top") as TopFragment
+            topFragment = supportFragmentManager.findFragmentByTag("top") as TopFragment
         }
     }
 }
