@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
             supportFragmentManager.beginTransaction()
                 .replace(R.id.top_container, topFragment, "top")
-                .replace(R.id.bottom_container, topFragment)
+                .replace(R.id.bottom_container, bottomFragment)
                 .commit()
         } else {
             topFragment = supportFragmentManager.findFragmentByTag("top") as TopFragment
