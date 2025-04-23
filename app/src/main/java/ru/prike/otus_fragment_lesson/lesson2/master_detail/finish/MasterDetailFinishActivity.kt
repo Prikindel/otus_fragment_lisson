@@ -18,23 +18,23 @@ class MasterDetailFinishActivity : FragmentActivity(), MasterDetailListFinishFra
     }
 
     private fun determinePaneLayout() {
-        val fragmentItemDetail: FrameLayout? = findViewById(R.id.flDetailContainer)
-        if (fragmentItemDetail != null) {
-            isTablet = true
-        }
+//        val fragmentItemDetail: FrameLayout? = findViewById(R.id.flDetailContainer)
+//        if (fragmentItemDetail != null) {
+//            isTablet = true
+//        }
     }
 
     override fun onItemSelected(item: Item?) {
         val fragmentItem: MasterDetailFinishFragment = MasterDetailFinishFragment.newInstance(item)
-        if (isTablet) {
-            val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-            ft.replace(R.id.flDetailContainer, fragmentItem)
-            ft.commit()
-        } else {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment1, fragmentItem)
-                .addToBackStack("simple_fragment")
-                .commit()
-        }
+//        if (isTablet) {
+//            val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+//            ft.replace(R.id.flDetailContainer, fragmentItem)
+//            ft.commit()
+//        } else {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment1, fragmentItem)
+//                .addToBackStack("simple_fragment")
+//                .commit()
+//        }
     }
 }
