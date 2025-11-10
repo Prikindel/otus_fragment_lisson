@@ -18,5 +18,8 @@ class NavActivity : AppCompatActivity() {
 
         binding = ActivityNavBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val navController = findNavController(R.id.nav_host_fragment_container)
+        binding.navView.setupWithNavController(navController)
     }
 }
