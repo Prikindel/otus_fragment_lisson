@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import ru.prike.otus_fragment_lesson.R
 
 class TopFragment : Fragment() {
     var count = 1
+
+    private val viewModel: BlankViewModel by activityViewModels()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -43,7 +46,8 @@ class TopFragment : Fragment() {
             openInnerFragment()
 //            (requireActivity() as Host).onAdd(count)
 //            ShareData.observe = count
-            sendResult(count)
+//            sendResult(count)
+            viewModel.setCount(count)
             count++
         }
 
@@ -71,7 +75,8 @@ class TopFragment : Fragment() {
     private fun processRemoveFragment() {
         childFragmentManager.popBackStack()
         count--
-        sendResult(count - 1)
+        viewModel.setCount(count - 1)
+//        sendResult(count - 1)
 //        if (count <= 1) (requireActivity() as Host).close()
 //        else (requireActivity() as Host).onAdd(count - 1)
 //        ShareData.observe = count
