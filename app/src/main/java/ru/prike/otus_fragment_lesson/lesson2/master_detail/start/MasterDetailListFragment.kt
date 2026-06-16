@@ -15,7 +15,7 @@ class MasterDetailListFragment : Fragment() {
 
     private var listener: OnItemSelectedListener? = null
 
-    interface OnItemSelectedListener {
+    fun interface OnItemSelectedListener {
         fun onItemSelected(item: Item?)
     }
 
