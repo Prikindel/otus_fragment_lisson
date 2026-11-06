@@ -5,7 +5,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import ru.prike.otus_fragment_lesson.R
-import ru.prike.otus_fragment_lesson.start.InnerFragmentFinish
 
 class InnerFragmentFinish : Fragment(R.layout.fragment_inner) {
 
