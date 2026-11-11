@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import ru.prike.otus_fragment_lesson.R
 import ru.prike.otus_fragment_lesson.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
@@ -25,6 +27,14 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.goToHomeButton.setOnClickListener {
+            findNavController().navigate(R.id.action_notificationsFragment_to_homeFragment)
+        }
     }
 
     override fun onDestroyView() {

@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import ru.prike.otus_fragment_lesson.R
 import ru.prike.otus_fragment_lesson.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -26,6 +28,14 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.goToNotificationButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_notificationsFragment)
+        }
     }
 
     override fun onDestroyView() {
